@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Love Served in Rice Bowls: a family of origin analysis by Brendon Ban Ren Jie.">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>Love Served in Rice Bowls</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&family=Shippori+Mincho+B1:wght@600;700;800&family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap&text=%E5%BA%8F%E7%AC%AC%E4%B8%80%E4%BA%8C%E4%B8%89%E5%9B%9B%E4%BA%94%E5%85%AD%E4%B8%83%E5%85%AB%E4%B9%9D%E5%8D%81%E7%AB%A0%E9%99%84%E5%BD%95%E7%94%B2%E4%B9%99%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E7%A2%97%E4%B8%AD%E4%B9%8B%E7%88%B1%E5%AE%B6">
+<style>
+/* Layout: a Chinese family book — lacquer-red header with gold window-lattice trim, rice-paper pages, a chapter rail numbered in Chinese, cinnabar seal stamps */
+:root {
+  --paper: #f4ecdd;
+  --sheet: #fbf6ec;
+  --ink: #241815;
+  --ink-soft: #6f5a4d;
+  --rule: #e0cfb6;
+  --cobalt: #a8261d;      /* cinnabar: the one accent */
+  --cobalt-wash: #f5e1d5;
+  --seal: #b3261e;
+  --gold: #a57828;
+  --gold-soft: #d6b56d;
+  --lacquer: #6b150f;
+  --lacquer-ink: #f6e6c4;
+  --note-bg: #f2e0ad;
+  --note-fg: #5a3d00;
+  --good: #2c7a5e;
+  --c-dh: #e3a07c;
+  --c-di: #8cc4a4;
+  --c-hb: #a5a9c9;
+  --c-ca: #e3a7b8;
+  --c-mh: #4f9a6d;
+  --f-brush: "Ma Shan Zheng", "Noto Serif SC", "STKaiti", "KaiTi", serif;
+  --f-cn: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  --f-title: "Yuji Syuku", "Shippori Mincho B1", "Songti SC", Georgia, serif;
+  --f-display: "Shippori Mincho B1", "Noto Serif SC", "Songti SC", Georgia, serif;
+  --f-body: "Shippori Mincho", "Songti SC", Georgia, "Times New Roman", serif;
+  --f-ui: "Zen Kaku Gothic New", "Hiragino Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --rail: 284px;
+  --bar: 64px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #150d0b; --sheet: #1e1310; --ink: #f1e3cd; --ink-soft: #b59f88; --rule: #3c2821;
+    --cobalt: #e2685b; --cobalt-wash: #3a1914; --seal: #c3352a; --gold: #d8ae5e; --gold-soft: #8d6c2e;
+    --lacquer: #3d0c08; --lacquer-ink: #f0d8a6; --note-bg: #3d2f12; --note-fg: #f0d48a; --good: #4fb28c;
+    --c-dh: #b37157; --c-di: #4f9c7f; --c-hb: #6d6f9a; --c-ca: #ad6a80; --c-mh: #3d8559;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #150d0b; --sheet: #1e1310; --ink: #f1e3cd; --ink-soft: #b59f88; --rule: #3c2821;
+  --cobalt: #e2685b; --cobalt-wash: #3a1914; --seal: #c3352a; --gold: #d8ae5e; --gold-soft: #8d6c2e;
+  --lacquer: #3d0c08; --lacquer-ink: #f0d8a6; --note-bg: #3d2f12; --note-fg: #f0d48a; --good: #4fb28c;
+  --c-dh: #b37157; --c-di: #4f9c7f; --c-hb: #6d6f9a; --c-ca: #ad6a80; --c-mh: #3d8559;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 17.5px; line-height: 1.85; font-weight: 400; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--lacquer); }
+
+/* top bar: lacquer with a gold fretwork band */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; height: var(--bar); display: flex; align-items: center; gap: 12px;
+  background: var(--lacquer); color: var(--lacquer-ink); padding-block: 0 10px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); font-family: var(--f-ui); }
+.bar::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 10px; background-color: var(--lacquer);
+  background-image:
+    linear-gradient(var(--gold), var(--gold)), linear-gradient(var(--gold), var(--gold)),
+    repeating-linear-gradient(90deg, transparent 0 4px, var(--gold) 4px 6px, transparent 6px 12px),
+    repeating-linear-gradient(90deg, var(--gold) 0 8px, transparent 8px 12px);
+  background-size: 100% 1px, 100% 1px, 100% 4px, 100% 1px;
+  background-position: 0 1px, 0 9px, 0 3px, 0 5px; background-repeat: no-repeat, no-repeat, no-repeat, no-repeat; }
+.bar .menu { display: none; }
+.brand { display: flex; align-items: center; gap: 12px; min-width: 0; text-decoration: none; color: var(--lacquer-ink); }
+.seal { width: 32px; height: 32px; border-radius: 3px; background: var(--seal); color: #fbeedd; display: grid; place-items: center; font-family: var(--f-brush); font-size: 21px; flex: none; box-shadow: inset 0 0 0 2px var(--seal), inset 0 0 0 3px #f3d9b3; }
+.brand b { font-family: var(--f-title); font-weight: 400; font-size: 17.5px; letter-spacing: .02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar .spacer { flex: 1; }
+.toggle { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--lacquer-ink); cursor: pointer; user-select: none; white-space: nowrap; }
+.toggle .mob { display: none; }
+.toggle input { accent-color: var(--gold); width: 16px; height: 16px; }
+.progress { position: absolute; left: 0; bottom: 10px; height: 2px; background: var(--gold-soft); width: 0; transition: width .2s; }
+button { font-family: var(--f-ui); }
+.iconbtn { border: 1px solid var(--gold-soft); background: transparent; color: var(--lacquer-ink); border-radius: 3px; height: 34px; padding: 0 10px; font-size: 13px; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* shell */
+.shell { display: grid; grid-template-columns: var(--rail) minmax(0, 1fr); min-height: calc(100% - var(--bar)); }
+nav.rail { position: sticky; top: calc(var(--bar) + env(safe-area-inset-top, 0px)); align-self: start; height: calc(100vh - var(--bar) - env(safe-area-inset-top, 0px)); overflow-y: auto;
+  border-right: 3px double var(--gold-soft); background: var(--sheet); padding: 22px 12px 40px max(12px, env(safe-area-inset-left, 0px)); font-family: var(--f-ui); }
+.rail h3 { display: flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 20px 10px 6px; font-weight: 600; }
+.rail h3::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+.rail h3:first-child { margin-top: 0; }
+.rail a { display: grid; grid-template-columns: 32px 1fr; gap: 6px; align-items: baseline; padding: 7px 10px; border-radius: 2px; color: var(--ink); text-decoration: none; font-size: 14px; line-height: 1.35; }
+.rail a span.n { color: var(--cobalt); font-family: var(--f-cn); font-weight: 600; font-size: 13px; }
+.rail a:hover { background: var(--cobalt-wash); }
+.rail a.on { background: var(--cobalt); color: var(--sheet); font-weight: 600; }
+.rail a.on span.n { color: var(--lacquer-ink); }
+
+main { min-width: 0; padding-block: 44px 80px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+article { max-width: 720px; margin: 0 auto; }
+.chap { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.chap .cn { font-family: var(--f-brush); font-size: 2.2rem; line-height: 1; color: var(--cobalt); }
+.eyebrow { font-family: var(--f-ui); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+h1, h2 { font-family: var(--f-display); font-weight: 700; text-wrap: balance; line-height: 1.25; }
+h1 { font-family: var(--f-title); font-weight: 400; font-size: 2.3rem; letter-spacing: .01em; margin: 10px 0 8px; }
+h1 + * { margin-top: 0; }
+.h1rule { height: 7px; margin: 0 0 26px; background:
+  linear-gradient(var(--cobalt), var(--cobalt)) 0 0/64px 3px no-repeat,
+  linear-gradient(var(--gold-soft), var(--gold-soft)) 0 6px/100% 1px no-repeat; }
+h2 { font-size: 1.32rem; font-weight: 800; margin: 2.1em 0 .55em; display: flex; align-items: center; gap: 10px; }
+h2::before { content: ""; width: 8px; height: 8px; background: var(--cobalt); transform: rotate(45deg); flex: none; }
+p { margin: 0 0 1em; }
+.lead { font-size: 1.14rem; color: var(--ink); }
+article a { color: var(--cobalt); text-underline-offset: 3px; }
+article ul, article ol { padding-left: 1.3em; margin: 0 0 1em; }
+article li { margin-bottom: .4em; }
+article li::marker { color: var(--cobalt); }
+mark.note { background: var(--note-bg); color: var(--note-fg); font-family: var(--f-ui); font-size: .82em; padding: 1px 7px; border-radius: 2px; font-weight: 500; border-left: 3px solid var(--gold); }
+body.hide-notes mark.note { display: none; }
+.tablewrap { overflow-x: auto; margin: 0 0 1.4em; border: 1px solid var(--gold-soft); background: var(--sheet); box-shadow: inset 0 0 0 3px var(--sheet), inset 0 0 0 4px var(--rule); padding: 4px; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; line-height: 1.5; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--rule); }
+th { font-family: var(--f-ui); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--cobalt); font-weight: 600; background: var(--cobalt-wash); border-bottom: 1px solid var(--gold-soft); }
+tr:last-child td { border-bottom: 0; }
+td:first-child { font-weight: 600; }
+
+/* cover */
+.cover { padding: 8px 0 8px; }
+.cover-grid { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 28px; align-items: start; }
+.bigseal { width: 132px; aspect-ratio: 1; max-width: 100%; background: var(--seal); color: #fbeedd; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+  grid-auto-flow: column; direction: rtl; place-items: center; font-family: var(--f-brush); font-size: 46px; line-height: 1; padding: 10px; transform: rotate(-3deg);
+  box-shadow: inset 0 0 0 5px var(--seal), inset 0 0 0 7px #f3d9b3; border-radius: 4px; margin-top: 8px; }
+.cover .title { font-family: var(--f-title); font-weight: 400; font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: 1.08; margin: 10px 0 6px; text-wrap: balance; }
+.cover .cn-title { font-family: var(--f-cn); font-weight: 600; color: var(--cobalt); letter-spacing: .3em; font-size: 1.05rem; margin: 0 0 14px; }
+.cover .line { font-style: italic; color: var(--ink-soft); }
+@media (max-width: 560px) { .cover-grid { grid-template-columns: 1fr; gap: 14px; } .bigseal { width: 104px; font-size: 36px; } }
+.meta-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; margin: 22px 0 0; padding: 16px 0 0; border-top: 1px solid var(--gold-soft); font-family: var(--f-ui); }
+.meta-list dt { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+.meta-list dd { margin: 2px 0 0; font-size: 14.5px; font-variant-numeric: tabular-nums; }
+@media (max-width: 520px) { .meta-list { grid-template-columns: 1fr; } }
+.patterns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 22px 0; }
+.pat { border-top: 3px solid var(--cobalt); padding: 12px 14px; font-size: .92rem; background: var(--sheet); box-shadow: inset 0 -1px 0 var(--rule); }
+.pat b { display: block; font-family: var(--f-display); font-size: 15px; color: var(--cobalt); margin-bottom: 4px; }
+@media (max-width: 640px) { .patterns { grid-template-columns: 1fr; } }
+
+/* pager */
+.pager { display: flex; justify-content: space-between; gap: 12px; margin-top: 52px; padding-top: 22px; border-top: 3px double var(--gold-soft); font-family: var(--f-ui); }
+.pager a { flex: 1; min-width: 0; text-decoration: none; color: var(--ink); border: 1px solid var(--rule); border-radius: 2px; padding: 12px 14px; background: var(--sheet); }
+.pager a:hover { border-color: var(--cobalt); }
+.pager a small { display: block; color: var(--cobalt); font-size: 12px; font-family: var(--f-cn); font-weight: 600; letter-spacing: .08em; }
+.pager a.next { text-align: right; }
+.pager a[hidden] { display: block !important; visibility: hidden; }
+
+/* timeline */
+.years { display: flex; gap: 6px; overflow-x: auto; padding: 4px 2px 12px; position: relative; }
+.yr { flex: 1 0 58px; border: 1px solid var(--rule); background: var(--sheet); color: var(--ink); border-radius: 2px; padding: 8px 4px; font-size: 13px; font-variant-numeric: tabular-nums; cursor: pointer; text-align: center; }
+.yr small { display: block; font-size: 11px; color: var(--ink-soft); }
+.yr.has::after { content: ""; display: block; width: 6px; height: 6px; transform: rotate(45deg); background: var(--gold); margin: 5px auto 0; }
+.yr.birth { border-color: var(--seal); }
+.yr.birth::after { background: var(--seal); }
+.yr.on { background: var(--cobalt); color: var(--sheet); border-color: var(--cobalt); }
+.yr.on small { color: var(--lacquer-ink); }
+.yr.on::after { background: var(--lacquer-ink); }
+.card { border: 1px solid var(--gold-soft); background: var(--sheet); padding: 20px 22px; margin: 8px 0 24px; box-shadow: inset 0 0 0 4px var(--sheet), inset 0 0 0 5px var(--rule); }
+.card h4 { font-family: var(--f-display); font-size: 1.18rem; margin: 0 0 4px; }
+.card .meta { font-family: var(--f-ui); font-size: 12px; color: var(--gold); letter-spacing: .06em; margin-bottom: 8px; text-transform: uppercase; }
+.card p:last-child { margin-bottom: 0; }
+
+/* genogram */
+.filters { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 12px; font-family: var(--f-ui); }
+.chip { border: 1px solid var(--rule); background: var(--sheet); color: var(--ink); border-radius: 2px; padding: 6px 12px; font-size: 13px; cursor: pointer; }
+.chip.on { background: var(--cobalt); border-color: var(--cobalt); color: var(--sheet); }
+.geno-wrap { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+.svgbox { overflow-x: auto; border: 1px solid var(--gold-soft); background: var(--sheet); padding: 10px; box-shadow: inset 0 0 0 4px var(--sheet), inset 0 0 0 5px var(--rule); }
+.svgbox svg { display: block; min-width: 620px; width: 100%; height: auto; font-family: var(--f-ui); }
+.svgbox text { fill: var(--ink); }
+.svgbox text.q { fill: var(--ink-soft); }
+.node { cursor: pointer; }
+.node .shape { stroke: var(--ink-soft); stroke-width: 1; }
+.node:hover .shape, .node.sel .shape { stroke: var(--cobalt); stroke-width: 2.5; }
+.ln { fill: none; stroke: var(--ink-soft); stroke-width: 1; }
+.cl { fill: none; stroke: var(--good); stroke-width: 1.6; }
+.ds { fill: none; stroke: var(--ink-soft); stroke-width: 1.3; stroke-dasharray: 3 4; }
+.xx { stroke: var(--ink); stroke-width: 1; fill: none; pointer-events: none; }
+.svgbox .dim { opacity: .14; transition: opacity .2s; }
+.svgbox .lit { opacity: 1; transition: opacity .2s; }
+.svgbox .ds.lit, .svgbox .cl.lit { stroke-width: 2.4; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-family: var(--f-ui); font-size: 12.5px; color: var(--ink-soft); margin: 10px 0 0; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 12px; height: 12px; border: 1px solid var(--ink-soft); display: inline-block; }
+.who .meta b { color: var(--cobalt); }
+.filterNote { font-size: .95rem; color: var(--ink-soft); margin: 0 0 4px; min-height: 1.5em; font-style: italic; }
+
+/* mobile */
+@media (max-width: 880px) {
+  .shell { grid-template-columns: minmax(0, 1fr); }
+  .bar .menu { display: inline-block; }
+  nav.rail { position: fixed; z-index: 25; left: 0; top: calc(var(--bar) + env(safe-area-inset-top, 0px)); height: auto; bottom: 0; width: min(300px, 86vw);
+    transform: translateX(-102%); transition: transform .22s ease; box-shadow: 0 10px 30px rgba(0,0,0,.25); padding-bottom: max(40px, env(safe-area-inset-bottom, 0px)); }
+  body.nav-open nav.rail { transform: none; }
+  .toggle .lbl { display: none; }
+  .toggle .mob { display: inline; }
+  body { font-size: 16px; }
+  h1 { font-size: 1.75rem; }
+  .chap .cn { font-size: 1.9rem; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+
+<header class="bar">
+  <button class="iconbtn menu" id="menuBtn" aria-label="Open chapters" aria-expanded="false">Chapters</button>
+  <a class="brand" href="#cover"><span class="seal" aria-hidden="true">家</span><b>Love Served in Rice Bowls</b></a>
+  <span class="spacer"></span>
+  <label class="toggle" for="notesToggle"><input type="checkbox" id="notesToggle" checked><span class="lbl">Show draft notes</span><span aria-hidden="true" class="mob">Notes</span></label>
+  <div class="progress" id="progress"></div>
+</header>
+
+<div class="shell">
+  <nav class="rail" id="rail" aria-label="Chapters"></nav>
+  <main id="main"><article id="page"></article></main>
+</div>
+
+<script>
+const N = (t) => `<mark class="note">${t}</mark>`;
+const T = (head, rows) => `<div class="tablewrap"><table><thead><tr>${head.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+
+const chapters = [
+{ id:'cover', group:'Front matter', n:'', title:'Cover and introduction', html: () => `
+<div class="cover"><div class="cover-grid">
+  <div class="bigseal" aria-hidden="true"><span>碗</span><span>中</span><span>之</span><span>爱</span></div>
+  <div>
+  <div class="eyebrow">A Family of Origin Analysis · Brendon Ban Ren Jie</div>
+  <div class="title">Love Served in Rice Bowls</div>
+  <p class="cn-title" lang="zh">碗中之爱</p>
+  <p class="line">If they wrote a book about my family, this is what it would be called.</p>
+  <dl class="meta-list">
+    <div><dt>Program</dt><dd>Master of Professional Counseling, Universiti Malaya</dd></div>
+    <div><dt>Course</dt><dd>PQA7020 Marriage and Family Counseling</dd></div>
+    <div><dt>Lecturer</dt><dd>Profesor Dr. Melati binti Sumari</dd></div>
+    <div><dt>Student ID</dt><dd>22059169</dd></div>
+    <div><dt>Submitted</dt><dd>2 November 2026</dd></div>
+  </dl>
+  </div>
+</div></div>
+<h2>Why this title</h2>
+<p class="lead">Nobody in my family says "I love you." I have never heard my father say it, and I am not sure his father ever said it to him. For a long time, I thought that meant it wasn't there.</p>
+<p>But love is not always a sentence. Sometimes it is a behavior, repeated so often that you stop noticing it. My grandmothers cooked for whoever walked through the door. My mother asks "have you eaten?" in every phone call, even in the weeks when she is the one grieving. My father worked long hours so his sons could study, and he never once asked to be thanked.</p>
+<p>This is what I have come to understand: some families speak in words, and some speak in what they do. Mine served its love quietly, in rice bowls, and left it to us to learn the language. This book is my attempt to finally read it.</p>
+<p>This e-book examines three generations of my family using Bowen family systems theory and the genogram method (McGoldrick et al., 2020). Three patterns stand out:</p>
+<div class="patterns">
+  <div class="pat"><b>Fathers and sons</b>My father is distant from his father and close to his mother. I repeat the same pattern.</div>
+  <div class="pat"><b>Women at the center</b>On both sides, mothers and grandmothers hold the closest bonds.</div>
+  <div class="pat"><b>Illness and loss</b>Diabetes and high blood pressure on my father's side; cancer across my mother's family.</div>
+</div>
+<p>Use the chapter list to move through the book. The <a href="#appendix-a">timeline</a> and <a href="#appendix-b">genogram</a> are interactive.</p>`},
+
+{ id:'birth', group:'My family system', n:'1', title:'Events around my birth', html: () => `
+<p class="lead">I was born in 1998 into a young, ambitious family that was building its future while the region's economy was shaking.</p>
+<p><b>My parents built their careers first.</b> In 1993 my mother was studying in Australia while my father was in Malaysia, so their relationship began with distance and sacrifice. Both graduated abroad and spent the mid-1990s building careers in accounting and finance. Around 1995 they moved from Kedah to Kuala Lumpur for work, and in 1998 they married, the same year I was born. In a traditional Chinese family, education and a stable profession come before comfort, and my parents lived that value fully.</p>
+<p><b>I was born during the Asian financial crisis.</b> The crisis of 1997–98 hit Malaysia hard, and it affected both my parents' jobs, so I was born into a household under real financial strain. That pressure may be part of why, a year later, there was no one at home to care for me. It also reinforced a family message I absorbed early: security is never guaranteed, so work hard and save.</p>
+<p><b>I was sent to my grandparents as a baby.</b> In 1999, when I was one, there was no one at home to care for me, so I was sent to live with my paternal grandparents in Sungai Petani. Between ages two and five I traveled back and forth between Sungai Petani and Kuala Lumpur, and a nanny looked after me while my parents worked.</p>
+<h2>Impact on me</h2>
+<p>I was one year old when I was sent away. I don't remember the day, but the body often remembers what the mind was too young to keep. My parents were not abandoning me. They were doing what families like ours have always done: giving up the present so their child could have a better future.</p>
+<p>A baby does not understand sacrifice, though. A baby only understands who is there. For me, it was my grandparents, then a nanny, then the long road between Sungai Petani and Kuala Lumpur. So I adapted. I learned to be easy to care for, to not cry too much, to settle into whoever was holding me.</p>
+<p>What we call our strengths are often the ways we once learned to survive. People describe me as calm and independent, and I think that calm was born on those journeys. It makes me a steady presence for clients. It also means the hardest thing for me is not being strong. It is letting someone hold me when I am the one who needs it.</p>
+<p>When I cried at my grandparents' house, my grandfather never asked what was wrong. He would put me in the car and drive me around the town until I was quiet. I still don't know what I was crying for. Maybe I missed my mother and father. Maybe I was too small to know. What I remember is the car, the streets of Sungai Petani passing by the window, and him beside me, saying nothing.</p>
+<p>It took me years to understand that drive. This is the same man my father has always been distant from, the same dashed line on my genogram. And yet he knew exactly what to do with a crying child. Not everyone who loves you has the words for it. Some people can only offer you the road, and trust that you will feel what they cannot say.</p>
+<p>See the <a href="#appendix-a">interactive timeline</a> for each year from 1993 to 2003.</p>`},
+
+{ id:'context', group:'My family system', n:'2', title:'Cultural and historical context', html: () => `
+<p class="lead">My family is Malaysian Chinese, rooted in the trading communities of northern Malaysia, and in two generations it moved from small business into professional careers.</p>
+${T(['Area','My family','Impact on me'],[
+['Culture and language','Hokkien on my grandfathers’ and maternal grandmother’s side, Cantonese on my paternal grandmother’s side. At home we speak English and Mandarin; my father speaks Hokkien only with his father.','I move between languages and cultures easily, which helps me build rapport with diverse clients. But Hokkien, the language my father shares with his father, did not pass down to my brothers and me. Some of what passes between them happens in a language our generation does not use at home.'],
+['Immigration','According to my parents, my great-grandparents came from southern China, most likely Fujian and Guangdong, in the early 1900s. The details were never written down.','I carry a migrant’s message: work hard, save, and give the next generation a better start.'],
+['Spirituality','Buddhist–Taoist practices: ancestor worship at the family altar, Qing Ming tomb-sweeping and Chinese New Year rituals. My paternal grandparents lead them; my mother’s side follows them less closely.','Rituals taught me respect for elders and ancestors, and a sense of belonging to something bigger than myself. Because my father’s side leads them, they also tie me to the side of the family where words are fewest.'],
+['Geography','Both grandparent families lived in Kedah; my mother’s roots are in Sabah. My parents later moved from Kedah to Kuala Lumpur.','Growing up between a small northern town and the capital, I learned to adapt but felt pulled between two homes.'],
+['Careers','Both grandfathers were traders with Form 3 education; both grandmothers were housewives. My mother’s siblings were mostly business owners. My parents became an accountant and a financial analyst, both educated abroad.','Education is seen as the way up. Choosing counseling meant stepping off the family’s business and finance path.'],
+['Historical events','The 1969 racial riots and the New Economic Policy shaped Chinese Malaysians’ sense that they must rely on themselves; the Asian financial crisis came the year I was born.','I learned early to value stability and self-reliance, and to worry about the future.']])}
+<p>My family's context taught me that security comes from hard work, education and family loyalty. In counseling, this helps me understand clients from collectivist and migrant families. It also reminds me not to assume every client shares my family's focus on achievement.</p>`},
+
+{ id:'members', group:'My family system', n:'3', title:'Family members and roles', html: () => `
+<p class="lead">My mother is the emotional center of the family, my father is its provider and authority, and my grandparents anchor both sides.</p>
+${T(['Person','Role in the family','Influence on me'],[
+['Mother (b. 1969)','Emotional hub and peacemaker. Financial analyst with a Master’s in IT. The youngest of ten, she lost her father the year she was born. Close to her mother, her siblings, my father and me.','My closest relationship. She taught me empathy, resilience and curiosity. I often became her confidant.'],
+['Father (b. 1969)','Provider and rule-maker. Accountant. The only son among three sisters, close to his mother, distant from his father.','Our relationship is distant. I learned that men show love through providing, not talking. I still seek his approval.'],
+['Benny (b. 2004)','Achiever. Chemistry graduate who studied abroad, now working.','We are distant. I studied architecture in Australia from 2016 until I came home during the pandemic in 2020, and that same year he left to study abroad. With our six-year gap, we have spent most of his teenage years in different countries.'],
+['Branson (b. 2010)','The baby of the family. Student, active in St John Ambulance.','We are close. With a 12-year gap, I often act as a mentor or second parent.'],
+['Paternal grandfather (b. 1942)','Patriarch. Retired Hokkien trader, interested in economics, finance and automobiles.','Represents traditional male authority. I lived with him as a baby, and whenever I cried he drove me around town until I settled. My father’s distance from him mirrors mine from my father.'],
+['Paternal grandmother (1939–2017)','Nurturer. Cantonese housewife skilled at hairdressing, cooking, baking, gardening and sewing.','Showed love through food and care. I lived with her and my grandfather as a baby, and we stayed very close. When she died in 2017, I broke down. It was the first great loss of my adult life.'],
+['Maternal grandfather (1926–1969)','Absent ancestor. Hokkien trader who died of cancer the year my mother was born.','His early death shaped my mother’s life and the family’s fear of loss.'],
+['Maternal grandmother (1929–2024)','Matriarch. Raised ten children alone after being widowed.','A model of strength and sacrifice.'],
+['Father’s three sisters','Close supporters of my father: two government servants and a bank teller.','Show how a family rallies around its only son.'],
+['Mother’s nine siblings','A large, close sibling group, mostly business owners. Four have died of cancer.','Taught me about loyalty and belonging, and about repeated grief.']])}
+<p>Click any person on the <a href="#appendix-b">genogram</a> to see their details.</p>`},
+
+{ id:'birth-order', group:'My family system', n:'4', title:'Birth order', html: () => `
+<p class="lead">I am the eldest son of three boys, born six years before Benny and twelve years before Branson. In a traditional Chinese family, this position carries more weight than almost any other.</p>
+<p><b>The eldest son's role.</b> The eldest son (长子) is expected to set an example, carry the family name, look after younger siblings and eventually care for aging parents. I was the only child for six years, so I received my parents' full attention and full expectations. My grandparents added their own. Growing up, they often compared us with my cousins, the children of my father's sisters: whose grades were better, whose life was going further. As the eldest grandson, I felt I was always being measured. I learned to work hard partly to be good enough, and I still find it hard to feel that what I achieve is enough.</p>
+<p><b>The large age gaps.</b> By the time Branson was born I was twelve and already helping to look after him. This made me a "parentified" older brother: protective, responsible and quick to step in. With Benny, the gap meant we never shared the same world. Then, just as he was becoming old enough to be a real companion, I left to study architecture in Australia in 2016. When I came home during the pandemic in 2020, he left. We kept missing each other, and the distance settled in.</p>
+<p><b>My parents' birth order.</b> My father was the third of four children and the only son among three sisters, so he likely carried the family's hopes, much like I do now. My mother was the youngest of ten, protected by older siblings, which may explain why closeness matters so much to her. When a youngest child marries an only son, the first-born child often becomes the helper. I believe I filled that role.</p>
+<h2>How it affects me now</h2>
+<ul><li><b>Strengths:</b> responsible, dependable and comfortable leading. I naturally take care of others, which drew me to counseling.</li>
+<li><b>Challenges:</b> perfectionism, guilt when I disappoint my parents, and putting others first. I sometimes over-function and then feel tired or resentful.</li></ul>
+<p>In counseling, I need to watch for the urge to rescue clients, especially younger clients or those who remind me of my brothers.</p>`},
+
+{ id:'values', group:'How my family works', n:'5', title:'Values, customs and beliefs', html: () => `
+<p class="lead">My family's values rest on filial piety (孝顺, <i>xiào shùn</i>): respect for elders, duty to family and sacrifice for the next generation. ${N('Check: adjust any row that doesn’t fit.')}</p>
+${T(['Dimension','Where my family sits','How it influenced me'],[
+['Socioeconomic class','Rose from working-class traders to upper-middle-class professionals educated abroad.','Grateful for opportunities, and pressured to justify my parents’ sacrifices.'],
+['Child- vs adult-centerd','Adult-centerd. Children obey; parents decide.','I defer to authority and can struggle to voice disagreement.'],
+['Schedules vs natural rhythms','Schedules. Work, study and tuition come first.','Organized and disciplined, but rest feels guilty.'],
+['Now vs future','Strongly future-oriented.','I plan well but can neglect the present and my wellbeing.'],
+['Male vs female focus','Male-focused in status, female-centerd in emotional life.','I carry the eldest son’s expectations; my emotional support comes from women.'],
+['Open vs closed','Closed about problems; open to travel and food.','I enjoy exploring but keep struggles private.'],
+['Individual vs collective','Collective. Family face (面子) comes first.','I weigh how my choices affect my family, sometimes more than what I want.']])}
+<h2>Customs and traditions</h2>
+<p>Chinese New Year reunion dinners, red packets (<i>ang pao</i>), visiting grandparents in Kedah, and traveling together. At Qing Ming we sweep our ancestors' tombs, and through the year we pray at the family altar, led by my paternal grandparents. Food is at the center of every gathering, and "have you eaten?" is how my family says "I care about you."</p>
+<h2>Unspoken rules</h2>
+<ul><li>Don't air dirty laundry (家丑不可外扬): family problems stay in the family.</li><li>Respect your elders, even when you disagree.</li><li>Study hard and choose a stable career.</li><li>Don't show weakness; feelings are private.</li></ul>
+<p>These rules gave me discipline, loyalty and respect. They also made it harder to talk openly about my mental health.</p>`},
+
+{ id:'communication', group:'How my family works', n:'6', title:'Communication patterns', html: () => `
+<p class="lead">Communication in my family is indirect, top-down and practical. We talk about food, school, work and plans, but rarely about feelings.</p>
+<p><b>Verbal style.</b> Care is expressed through "have you eaten?", "did you study?" or "wear more clothes", rather than "I love you" or "I'm proud of you." Criticism is more common than praise, because praise is thought to make children lazy.</p>
+<p><b>Nonverbal.</b> A look, a sigh or silence from my father tells me he is unhappy. My mother shows love by cooking my favorite food or cutting fruit for me. Physical affection is rare, especially between my father and me.</p>
+<p><b>Direction.</b> Communication flows from parents down to children. My mother often acts as the go-between: when my father is upset with me, I usually hear it from her. This is a classic triangle (Kerr &amp; Bowen, 1988).</p>
+<p><b>Conflict resolution.</b> We avoid open conflict. People go quiet, withdraw or wait for it to pass, then act as if nothing happened. ${N('Check: does anyone shout or use the silent treatment?')}</p>
+<p><b>Alliances.</b> My mother and I form a close alliance, as do my mother and her siblings, and my father with his mother and sisters. Branson and I are close; Benny is more independent.</p>
+<p><b>Family secrets.</b> Money problems, illness and mental health are kept private. My own diagnosis is something my family finds hard to talk about openly. ${N('Your choice: keep, or change to “emotional struggles”.')}</p>
+<h2>Impact on me</h2>
+<p>I became skilled at reading moods and unspoken messages, which helps me notice clients' nonverbal cues. I also learned to avoid conflict and hide my feelings. As a counselor, I am learning to name emotions out loud and to stay present when clients express anger.</p>`},
+
+{ id:'cohesion', group:'How my family works', n:'7', title:'Family cohesion', html: () => `
+<p class="lead">My family is close and loyal, but the closeness is uneven: it runs strongly through the women and is thin between fathers and sons.</p>
+<p><b>Closeness.</b> Using Olson's circumplex model (Olson, 2000), my family sits between "connected" and "enmeshed" on my mother's side and closer to "separated" on the father–son line. No one has cut off contact, but the father–son distance repeats across two generations.</p>
+<p><b>Loyalty.</b> Loyalty means showing up: Chinese New Year, visiting relatives, supporting each other during illness, never shaming the family in public. As the eldest son, I am expected to succeed, stay close and eventually care for my parents. ${N('Check: is that true for you?')}</p>
+<p><b>Warmth.</b> Shown through actions: cooking, buying what we need, paying for education, turning up at the hospital. My mother's side gathers often; my father's warmth is quieter.</p>
+<p><b>Cut-offs.</b> None formally. My distance from my father and Benny is a polite emotional distance, which Bowen describes as managing anxiety by reducing contact rather than resolving it.</p>
+<h2>Impact on me</h2>
+<p>There is a sentence I have never said to my father, and I suspect he never said it to his: <i>I want to know you.</i> We sit at the same table every Chinese New Year. We talk about work, the traffic, the food. Underneath it is a whole conversation neither of us knows how to begin.</p>
+<p>When I drew my genogram, I saw the dashed line between my father and his father, and then the same dashed line between my father and me. That was the moment something softened. His silence was never a judgment of me. It was something he was handed, the way it was handed to me. We don't choose the patterns we inherit. We only choose whether we keep passing them on.</p>
+<p>I know my family will support me in a crisis, but the closeness comes with expectations. With my mother, closeness can become over-involvement, where I absorb her worries. With my father, I long for connection but don't know how to start. In practice, I connect easily with warm clients and need to work harder with distant ones, especially fathers and older men.</p>`},
+
+{ id:'life-events', group:'How my family works', n:'8', title:'Life cycle events', html: () => `
+<p class="lead">The biggest shifts were births that changed my role, moves between Kedah and Kuala Lumpur, and a long series of losses on my mother's side.</p>
+${T(['Year','Age','Event','Impact on me'],[
+['c. 1995','−3','Parents moved from Kedah to Kuala Lumpur for work','I was born in Kedah but grew up between KL and my grandparents’ home'],
+['1998','0','My parents married; I was born in Sungai Petani','I arrived as my parents were still starting their marriage and careers'],
+['1999–2003','1–5','Lived with grandparents, then moved between Sungai Petani and KL with a nanny','Learned to adapt; strong bonds with grandparents and mother'],
+['2000','2','Mother’s sister died of cancer','Shaped the grief my mother carried'],
+['2004','6','Benny was born','Began my big-brother role'],
+['2010','12','Branson was born','Took on caretaking and mentoring'],
+['2016–2020','18–22','I studied architecture in Australia','I missed most of Benny’s early teenage years'],
+['2017','19','Paternal grandmother and mother’s eldest sister died','I was very close to my grandmother and broke down when she died'],
+['2020','22','I came home during the COVID-19 pandemic; Benny left to study abroad','We missed each other again, and our distance grew'],
+['2021','23','Mother’s sister died of cancer','Watched my mother grieve while coping with my own challenges'],
+['2024','26','Maternal grandmother died','The family lost its matriarch'],
+['2025','27','Mother’s brother died of cancer','Deepened my awareness of grief and health risks'],
+['2025','27','Started my Master of Professional Counseling at Universiti Malaya','Began to see my family through a new lens'],
+['2026','28','Diagnosed with schizophrenia and depression','A turning point in my self-understanding '+N('Your choice')]])}
+<p>My mother was born in 1969, the same year her father died of cancer. She never heard his voice. She grew up the youngest of ten, raised by a widowed mother who held the whole family together with her hands. Between 2000 and 2025, she buried four of her siblings, three sisters and a brother, all to the same illness that took the father she never met. In 2024, in the middle of that grief, she lost her mother too.</p>
+<p>I have watched her stand at funerals and then come home and ask me if I have eaten. I used to think that was avoidance. Now I see it differently. Grief does not always look like tears. Sometimes it looks like someone who has lost too much, refusing to stop caring for the people who are still here. That is the bravest thing I know.</p>
+<p>In 2017, grief reached me too. My paternal grandmother, the woman whose house I lived in as a baby, passed away. We had always been very close, and when she died I broke down completely. In a family where grief is folded quietly into cooking and carrying on, I did not know where to put mine. I think that is what grief is, in the end: love that has nowhere left to go. Hers had been served to me without words for nineteen years, and suddenly the table was empty.</p>
+<p>In family life cycle terms (McGoldrick et al., 2016), my family is launching children while losing its oldest generation, and my parents face diabetes and high blood pressure at the same time as grief. As the eldest son, I am moving into a role where I may soon support my parents.</p>`},
+
+{ id:'strengths', group:'How my family works', n:'9', title:'Strengths and vulnerabilities', html: () => `
+<p class="lead">My family's greatest strengths are resilience, loyalty and a commitment to education; its main vulnerabilities are inherited illness, repeated grief and emotional silence.</p>
+<h2>Strengths</h2>
+${T(['Strength','Evidence','How it influenced me'],[
+['Resilience','My maternal grandmother raised ten children alone after being widowed in 1969.','I believe hard times can be survived, and I bring that hope to clients.'],
+['Loyalty','My mother’s siblings stay close; my father’s sisters support him.','I know I have a safety net.'],
+['Education and work ethic','Two generations rose from Form 3 traders to professionals.','I am disciplined and motivated to learn.'],
+['Practical care','Grandmothers and mother show love through cooking and caring.','I show care through action.'],
+['Openness to the world','Travel, new food, studying abroad.','I am curious and adaptable.']])}
+<h2>Vulnerabilities</h2>
+${T(['Vulnerability','Evidence','How it influenced me'],[
+['Inherited illness','Diabetes and high blood pressure in my paternal grandparents, father and two aunts; high blood pressure in my mother; cancer in five maternal relatives.','I worry about my parents’ health and my own risk.'],
+['Repeated grief','My mother lost her father at birth, then four siblings and her mother between 2000 and 2025.','I am sensitive to loss and can over-protect my mother.'],
+['Emotional silence and stigma','Feelings and mental health are rarely discussed.','It was harder to seek help for my own mental health.'],
+['Mental illness','I live with schizophrenia and depression. '+N('Your choice'),'I know what it is like to be a client.'],
+['Father–son distance','Repeats across two generations.','An unmet need for my father’s approval.'],
+['Pressure to achieve','High expectations on the eldest son.','Perfectionism and fear of failure.']])}
+<p>The same loyalty that protects us also keeps problems hidden, and the same work ethic that lifted us leaves little room for rest and feelings.</p>`},
+
+{ id:'influence', group:'How my family works', n:'10', title:'How I influenced my family', html: () => `
+<p class="lead">Influence runs both ways: my family shaped me, and I have changed my family too.</p>
+<p><b>My birth created a new generation.</b> It made my parents into parents and pulled my grandparents into active care, drawing the generations closer.</p>
+<p><b>I became my mother's confidant.</b> This supported her through her losses, but it also kept part of the emotional load on me, which may have let my father stay at a distance.</p>
+<p><b>I became a second parent to Branson.</b> This eased my parents' workload and gave him a role model, and added to my sense of responsibility.</p>
+<p><b>I chose a different path, twice.</b> My grandparents and my mother's siblings were traders and business owners, and my parents chose accounting and finance. In 2016 I went to Australia to study architecture, the same country where my mother had studied before I was born. In 2025 I changed direction again and began my Master of Professional Counseling, which took me further still from the family's tradition of business and money. ${N('Check: how did your parents react?')}</p>
+<p><b>I brought mental health into the open.</b> My diagnosis forced my family to face a topic traditional Chinese families often hide. ${N('Your choice: keep or remove.')}</p>
+<p><b>I am starting to challenge old patterns.</b> In small ways, like asking my father about his life or saying how I feel, I am trying to change the pattern rather than repeat it. ${N('Check: add a real example.')}</p>`},
+
+{ id:'presenting-problem', group:'Practice', n:'11', title:'A problem that brings us to therapy', html: () => `
+<p><i>This scenario is fictitious, but it is built on real patterns in my family.</i></p>
+<h2>The problem</h2>
+<p>Branson, now 16, has become withdrawn, is skipping school and spends most nights gaming. His school counselor refers the family. Branson is the identified patient, but the real problem is a family that cannot grieve together.</p>
+<h2>Context</h2>
+<p>In 2024 my maternal grandmother died, and in 2025 my mother lost her fourth sibling to cancer, on top of losing her father the year she was born. She has become tired and anxious about everyone's health. My father works longer hours. I have become my mother's main support. Benny is busy with his own life. Branson feels the tension but has no words for it.</p>
+<h2>Who comes, and who resists</h2>
+<p>My mother comes willingly. I come and try to "help" the counselor. My father is reluctant ("family matters stay at home"). Benny says he is too busy. Branson comes because he is told to.</p>
+<h2>Why it isn't solving itself</h2>
+<ul>
+<li><b>Detouring through a symptom.</b> Worrying about Branson is easier than feeling the loss (Minuchin, 1974).</li>
+<li><b>A rigid triangle.</b> My mother turns to me, not my father, so the couple never grieves together (Kerr &amp; Bowen, 1988).</li>
+<li><b>Over- and under-functioning.</b> The more I help, the less my father needs to step in.</li>
+<li><b>Family rules.</b> "Don't air dirty laundry" delays help until a child's problem forces it.</li>
+<li><b>Multigenerational transmission.</b> My mother learned to cope with loss by staying busy, not talking, and passes that style down.</li>
+</ul>
+<h2>Who benefits from no change</h2>
+<p>Everyone avoids pain in the short term: my father avoids emotional talk, my mother avoids her grief, and I keep my role as the "good son." Branson and the couple relationship carry the cost.</p>`},
+
+{ id:'patterns', group:'Practice', n:'12', title:'Patterns and my practice', html: () => `
+<p class="lead">My genogram shows four patterns repeating across three generations, and each could affect how I work with clients. Try the filters on the <a href="#appendix-b">genogram</a> to see them.</p>
+${T(['Pattern','Generations','How it could show up in practice'],[
+['Father–son distance; sons close to mothers','Grandfather → father → me','Easier rapport with mothers, harder with fathers. I may side with a mother against a distant father.'],
+['Women as the emotional center','Both grandmothers → mother and aunts','I may expect women to carry the emotional work, or overlook men’s quieter care.'],
+['Repeated illness and loss','Cancer, diabetes, high blood pressure on both sides','Clients facing illness or grief may stir my own fears.'],
+['Eldest-son and caretaker roles','Father as only son; me as eldest','I may rescue clients or take too much responsibility.']])}
+<h2>Anxiety triggers</h2>
+<ul><li>Conflict, raised voices or a disappointed authority figure.</li><li>Clients describing illness, hospitals or the death of a parent or sibling.</li><li>Distant or hard-to-read clients, especially older men.</li><li>Feeling that I am failing a client.</li></ul>
+<p>${N('Check: add or remove triggers.')}</p>
+<h2>How my anxiety shows</h2>
+<p>I over-function: I talk more, give advice too quickly or smooth over conflict. Or I go quiet and withdraw, the way my family handles tension.</p>
+<h2>Unresolved issues and boundaries</h2>
+<p>An unmet wish for my father's approval, unspoken grief, my role as my mother's confidant, and living with a mental illness that makes stress hit harder ${N('Your choice')}. I find saying no hard, which could mean running over time or taking clients' problems home.</p>`},
+
+{ id:'self-care-plan', group:'Practice', n:'13', title:'Self-monitoring plan', html: () => `
+<p class="lead">My plan has three parts: notice my reactions early, use support regularly, and look after my own mental and physical health.</p>
+${T(['Strategy','What I will do','How often'],[
+['Clinical supervision','Bring cases involving distant fathers, grief, illness or conflict; ask my supervisor to flag rescuing.','Weekly'],
+['Personal therapy and treatment','Continue my psychiatric care and take my medication as prescribed, and keep seeing my own counselor, especially during stressful periods. Tell my psychiatrist early if work stress starts to affect my sleep or mood.','Ongoing'],
+['Reflective journaling','After hard sessions, note what I felt and whether it came from the client or my family.','After each; review weekly'],
+['Early warning signs','Poor sleep, withdrawing, irritability, low mood, over-working. Two or more for a week → tell my supervisor and clinician.','Daily check'],
+['Genogram check-in','Sketch each new family’s genogram and note overlaps with mine.','Each new family'],
+['Self-care','Sleep, basketball or walking, healthy eating to lower my diabetes and blood pressure risk, time with friends.','Daily and weekly'],
+['Peer consultation','Discuss cultural issues with Chinese Malaysian families.','Monthly'],
+['Continued learning','Bowen theory, grief counseling, culturally responsive practice.','One workshop a year']])}
+<h2>In the moment</h2>
+<ol><li>Pause and take a slow breath.</li><li>Name the feeling ("this father reminds me of my dad").</li><li>Return to the client's experience.</li><li>Note it for journaling and supervision.</li></ol>
+<h2>Boundaries I will keep</h2>
+<ul><li>Start and end on time.</li><li>Understand before advising.</li><li>Clients own their change; I support it.</li><li>Take my family's problems to my own support, not into the room.</li></ul>`},
+
+{ id:'learned', group:'Practice', n:'14', title:'What I learned', html: () => `
+<p class="lead">Many things I thought were "just my personality" are family patterns that began long before me.</p>
+<p><b>About myself.</b> My distance from my father is not simply a personal failure; he has the same distance from his father. My caretaking comes partly from being the eldest son and from early years moving between homes. I better understand why asking for help, including for my mental health, has felt so hard.</p>
+<p><b>About my family.</b> My mother lost her father before she could know him and has kept losing the people closest to her; her closeness to me makes more sense now. I see my father with more compassion: he may never have learned another way to be close. Benny's distance comes from timing, not a lack of care: a six-year gap, and then years when one of us was always overseas.</p>
+<h2>Areas for growth</h2>
+<ul><li>Build a more open relationship with my father, one conversation at a time.</li><li>Reconnect with Benny.</li><li>Keep healthy boundaries with my mother while staying close.</li><li>Rest and ask for help without guilt.</li><li>Keep looking after my mental and physical health.</li></ul>
+<h2>How I will work with families</h2>
+<p>I will attend to culture, especially filial piety, face and mental health stigma in Asian families. I will respect care shown through actions, make a special effort to engage fathers and quieter members, and use the genogram to show families that their struggles have a history, and that patterns can change.</p>
+<h2>If I could say it out loud</h2>
+<p>${N('Check: change any word so these lines sound like you.')}</p>
+<p><i>To my father:</i> I see now that the distance between us did not start with us. You carried it from your father, and I carried it from you. I don't want to hand it to anyone else. I would like to try, slowly, to meet you somewhere in the middle.</p>
+<p><i>To my mother:</i> You never knew your father, and you have spent your whole life holding everyone else together. Thank you for every bowl of rice. I understand now that each one was a sentence.</p>
+<p><i>To my grandmothers:</i> You raised your families with your hands. I am still eating from what you planted.</p>
+<p><i>To my grandfather:</i> Thank you for every drive around Sungai Petani. I understand now that the car was your way of holding me.</p>
+<p><i>To my brothers:</i> I hope we can be the generation that says the quiet parts out loud.</p>
+<p>This assignment taught me something I will carry into every session: you cannot guide anyone through a place you are unwilling to go yourself. I can only sit with a family's pain if I have first learned to sit with my own. Healing, I am learning, is not about becoming someone new. It is about understanding where you came from, and choosing, gently, what you will carry forward. My family has always served its love in silence. I am learning to say it out loud.</p>`},
+
+{ id:'appendix-a', group:'Appendices', n:'A', title:'Timeline 1993–2003', html: () => `
+<p class="lead">Family events five years before and after my birth. Choose a year.</p>
+<div class="years" id="years" role="tablist" aria-label="Years"></div>
+<div class="card" id="yearCard" aria-live="polite"></div>
+<p>During my first five years, my parents' careers came first, and grandparents and a nanny filled the gap. This early pattern of separation and adaptation is the root of my self-reliance and my close bond with my mother.</p>`},
+
+{ id:'appendix-b', group:'Appendices', n:'B', title:'Genogram', html: () => `
+<p class="lead">Three generations of my family. Click a person for details, or pick a pattern to highlight it.</p>
+<div class="filters" id="filters"></div>
+<p class="filterNote" id="filterNote"></p>
+<div class="geno-wrap">
+  <div class="svgbox" id="svgbox"></div>
+  <div class="card who" id="who"></div>
+</div>
+<div class="legend">
+  <span><i class="sw"></i>Male</span><span><i class="sw" style="border-radius:50%"></i>Female</span>
+  <span><i class="sw" style="background:var(--c-dh)"></i>Diabetes + high blood pressure</span>
+  <span><i class="sw" style="background:var(--c-di)"></i>Diabetes</span>
+  <span><i class="sw" style="background:var(--c-hb)"></i>High blood pressure</span>
+  <span><i class="sw" style="background:var(--c-ca)"></i>Cancer</span>
+  <span><i class="sw" style="background:linear-gradient(90deg,var(--c-mh) 50%,var(--cobalt-wash) 50%)"></i>Mental health condition</span>
+  <span>✕ Deceased</span>
+  <span><svg width="26" height="10"><path d="M0 3H26M0 7H26" stroke="var(--good)" stroke-width="1.6"/></svg>Close</span>
+  <span><svg width="26" height="10"><path d="M0 5H26" stroke="var(--ink-soft)" stroke-width="1.3" stroke-dasharray="3 4"/></svg>Distant</span>
+</div>
+<p style="margin-top:14px">${N('Your choice: if you prefer not to disclose your diagnosis, the half-shading can be removed.')}</p>`},
+
+{ id:'references', group:'Appendices', n:'', title:'References', html: () => `
+<p>${N('Check: confirm against your course readings.')}</p>
+<p>Kerr, M. E., &amp; Bowen, M. (1988). <i>Family evaluation: An approach based on Bowen theory</i>. W. W. Norton.</p>
+<p>McGoldrick, M., Garcia Preto, N., &amp; Carter, B. (2016). <i>The expanded family life cycle: Individual, family, and social perspectives</i> (5th ed.). Pearson.</p>
+<p>McGoldrick, M., Gerson, R., &amp; Petry, S. (2020). <i>Genograms: Assessment and treatment</i> (4th ed.). W. W. Norton.</p>
+<p>Minuchin, S. (1974). <i>Families and family therapy</i>. Harvard University Press.</p>
+<p>Olson, D. H. (2000). Circumplex model of marital and family systems. <i>Journal of Family Therapy, 22</i>(2), 144–167.</p>`}
+];
+
+/* ---------- timeline data ---------- */
+const years = [
+ {y:1993,a:-5,t:'Mother studies in Australia',d:'My mother was studying in Australia while my father was in Malaysia. Their relationship began with distance and sacrifice.',w:'Parents'},
+ {y:1994,a:-4,t:'Parents build their careers',d:'Both graduated abroad and began careers in accounting and finance.',w:'Parents'},
+ {y:1995,a:-3,t:'Parents move to Kuala Lumpur',d:'Around 1995 my parents moved from Kedah to Kuala Lumpur for work.',w:'Parents'},
+ {y:1996,a:-2,t:'No recorded events',d:N('Check: add any event you know.'),w:''},
+ {y:1997,a:-1,t:'Asian financial crisis begins',d:'The crisis hit Malaysia hard and affected both my parents’ jobs in accounting and finance.',w:'Whole family'},
+ {y:1998,a:0,t:'My parents marry, and I am born',d:'My parents married this year, and I was born in Sungai Petani, Kedah: their first child and the start of a new generation.',w:'Whole family'},
+ {y:1999,a:1,t:'Sent to live with my paternal grandparents',d:'No one at home could care for me, so I lived with my father’s parents in Sungai Petani. Whenever I cried, my grandfather drove me around town until I was quiet.',w:'Me, grandparents'},
+ {y:2000,a:2,t:'Moving between Sungai Petani and KL',d:'I traveled back and forth and became very close to my mother. My mother’s sister died of cancer this year.',w:'Me, mother'},
+ {y:2001,a:3,t:'Cared for by a nanny',d:'A nanny looked after me while my parents worked.',w:'Me'},
+ {y:2002,a:4,t:'Cared for by a nanny',d:'My nanny continued to look after me.',w:'Me'},
+ {y:2003,a:5,t:'Cared for by a nanny',d:'My nanny looked after me until school age.',w:'Me'}
+];
+
+/* ---------- genogram data ---------- */
+const P = {
+ pgf:{x:50,y:80,s:'m',z:30,c:'dh',top:['Grandpa · 1942','Trader, Hokkien'],name:'Paternal grandfather',info:'Born 1942. Trader from Kedah, Hokkien, schooled to Form 3. Interested in economics, finance, automobiles and travel. Has diabetes and high blood pressure.',rel:'Distant from my father, yet tender with me: when I cried as a baby, he drove me around town until I settled.',tags:['fs','ill']},
+ pgm:{x:160,y:80,s:'f',z:15,c:'dh',dead:1,top:['Grandma · 1939–2017','Housewife, Cantonese'],name:'Paternal grandmother',info:'1939–2017, died of old age. Cantonese housewife from Kedah, schooled to Form 3. Skilled at hairdressing, cooking, baking, gardening and fashion sewing. Had diabetes and high blood pressure.',rel:'Close to my father and his sisters.',tags:['fs','ill','women','loss']},
+ mgf:{x:380,y:80,s:'m',z:30,c:'ca',dead:1,top:['Grandpa · 1926–1969','Trader, Hokkien'],name:'Maternal grandfather',info:'1926–1969. Hokkien trader who died of cancer the year my mother was born.',rel:'My mother never knew him.',tags:['ill','loss']},
+ mgm:{x:520,y:80,s:'f',z:15,dead:1,top:['Grandma · 1929–2024','Housewife, Hokkien'],name:'Maternal grandmother',info:'1929–2024, died of old age. Hokkien housewife who raised ten children alone. Sewed, gardened, cooked and reared animals.',rel:'Close to my mother.',tags:['women','loss']},
+ a64:{x:24,y:180,s:'f',z:13,yr:['1964'],name:'Aunt (father’s sister)',info:'Born 1964. Government servant.',rel:'Close to my father.',tags:['women']},
+ a68:{x:68,y:180,s:'f',z:13,c:'di',yr:['1968'],name:'Aunt (father’s sister)',info:'Born 1968. Bank teller. Has diabetes.',rel:'Close to my father.',tags:['women','ill']},
+ dad:{x:112,y:180,s:'m',z:26,c:'dh',name:'Father',info:'Born 1969. Accountant, graduated abroad. Moved from Kedah to Kuala Lumpur. Enjoys basketball, travel, movies and outdoor activities. Has diabetes and high blood pressure. Third of four children, the only son.',rel:'Close to his mother, sisters and my mother. Distant from his father and from me.',tags:['fs','ill']},
+ a76:{x:156,y:180,s:'f',z:13,c:'hb',yr:['1976'],name:'Aunt (father’s sister)',info:'Born 1976. Government servant. Has high blood pressure.',rel:'Close to my father.',tags:['women','ill']},
+ m52:{x:250,y:180,s:'f',z:13,c:'ca',dead:1,yr:['1952','d.2017'],name:'Aunt (mother’s eldest sister)',info:'1952–2017, died of cancer. Business owner.',rel:'Close to my mother.',tags:['ill','loss','women']},
+ m53:{x:294,y:180,s:'m',z:26,yr:['1953'],name:'Uncle (mother’s brother)',info:'Born 1953. Business owner.',rel:'Close to my mother.',tags:[]},
+ m55:{x:338,y:180,s:'m',z:26,yr:['1955'],name:'Uncle (mother’s brother)',info:'Born 1955. Business owner.',rel:'Close to my mother.',tags:[]},
+ m57:{x:382,y:180,s:'m',z:26,yr:['1957'],name:'Uncle (mother’s brother)',info:'Born 1957. Business owner.',rel:'Close to my mother.',tags:[]},
+ m59:{x:426,y:180,s:'m',z:26,yr:['1959'],name:'Uncle (mother’s brother)',info:'Born 1959. Business owner.',rel:'Close to my mother.',tags:[]},
+ m61:{x:470,y:180,s:'f',z:13,c:'ca',dead:1,yr:['1961','d.2000'],name:'Aunt (mother’s sister)',info:'1961–2000, died of cancer. Admin executive.',rel:'Close to my mother.',tags:['ill','loss','women']},
+ m63:{x:514,y:180,s:'m',z:26,c:'ca',dead:1,yr:['1963','d.2025'],name:'Uncle (mother’s brother)',info:'1963–2025, died of cancer. Business owner.',rel:'Close to my mother.',tags:['ill','loss']},
+ m65:{x:558,y:180,s:'m',z:26,yr:['1965'],name:'Uncle (mother’s brother)',info:'Born 1965. Works in agriculture.',rel:'Close to my mother.',tags:[]},
+ m67:{x:602,y:180,s:'f',z:13,c:'ca',dead:1,yr:['1967','d.2021'],name:'Aunt (mother’s sister)',info:'1967–2021, died of cancer. Admin executive.',rel:'Close to my mother.',tags:['ill','loss','women']},
+ mom:{x:646,y:180,s:'f',z:13,c:'hb',name:'Mother',info:'Born 1969. Financial analyst with a Master’s in IT and an accounting background; graduated abroad. Roots in Sabah; moved from Kedah to Kuala Lumpur. Enjoys crochet, jewelry-making, travel, food and movies. Has high blood pressure. Youngest of ten.',rel:'Close to her mother, her siblings, my father and me.',tags:['fs','ill','women']},
+ me:{x:230,y:307,s:'m',z:30,mh:1,low:['Brendon · 1998','Master’s student'],name:'Me (Brendon)',info:'Born 1998 in Sungai Petani, Kedah. Master of Professional Counseling student at Universiti Malaya. Studied architecture in Australia from 2016 to 2020. Living with schizophrenia and depression. '+N('Your choice'),rel:'Close to my mother and Branson. Distant from my father and Benny.',tags:['fs']},
+ benny:{x:380,y:307,s:'m',z:30,low:['Benny · 2004','Chemistry graduate'],name:'Benny (brother)',info:'Born 2004. Chemistry graduate who studied abroad, now working. Enjoys gaming, basketball, outings and travel.',rel:'Distant from me. I was abroad from 2016 to 2019, and he left to study abroad the year I came home.',tags:[]},
+ branson:{x:530,y:307,s:'m',z:30,low:['Branson · 2010','Student'],name:'Branson (brother)',info:'Born 2010. Student, active in St John Ambulance. Enjoys gaming, basketball and movies.',rel:'Close to me.',tags:[]}
+};
+// lines: [d, kind, tags]
+const L = [
+ ['M50 95 V110 H160 V95 M105 110 V137','ln',[]],
+ ['M24 137 H156 M24 142 H156','cl',['women']],
+ ['M24 142 V167 M68 142 V167 M112 142 V167 M156 142 V167','ln',[]],
+ ['M121 167 L146 93 M127 168 L152 94','cl',['fs','women']],
+ ['M101 167 L63 96','ds',['fs']],
+ ['M535 77 H657 V167 M535 83 H651 V167','cl',['women']],
+ ['M380 95 V110 H520 V95 M450 110 V137','ln',[]],
+ ['M250 137 H646 M250 142 H646','cl',['women']],
+ ['M250 142 V167 M294 142 V167 M338 142 V167 M382 142 V167 M426 142 V167 M470 142 V167 M514 142 V167 M558 142 V167 M602 142 V167 M646 142 V167','ln',[]],
+ ['M112 193 V238 M646 193 V238 M380 243 V280','ln',[]],
+ ['M112 238 H646 M112 243 H646','cl',[]],
+ ['M230 280 H530 M230 280 V292 M380 280 V292 M530 280 V292','ln',[]],
+ ['M216 292 L120 196','ds',['fs']],
+ ['M245 307 H365','ds',[]],
+ ['M215 314 H170 V372 H470 V307 H515 M215 320 H164 V378 H476 V313 H515','cl',[]],
+ ['M215 300 H14 V392 H666 V177 H659 M215 306 H8 V398 H672 V183 H659','cl',['fs','women']]
+];
+const FILTERS = [
+ {k:'all',label:'Everyone',note:''},
+ {k:'fs',label:'Father–son pattern',note:'Grandfather and father are distant; father and I are distant. In both generations the son is close to his mother.'},
+ {k:'women',label:'Women at the center',note:'The closest bonds on both sides run through mothers, grandmothers and sisters.'},
+ {k:'ill',label:'Inherited illness',note:'Diabetes and high blood pressure on my father’s side and in both parents; cancer across my mother’s family.'},
+ {k:'loss',label:'Loss',note:'Six deaths: both grandmothers, my maternal grandfather, and three aunts and an uncle on my mother’s side. Five were from cancer.'}
+];
+
+/* ---------- build ---------- */
+const $ = (s) => document.querySelector(s);
+const rail = $('#rail'), page = $('#page');
+const CN = ['','一','二','三','四','五','六','七','八','九','十','十一','十二','十三','十四'];
+const cnLabel = c => c.id === 'cover' ? '序' : c.id === 'references' ? '参考文献' : c.n === 'A' ? '附录甲' : c.n === 'B' ? '附录乙' : '第' + CN[+c.n] + '章';
+const cnShort = c => c.id === 'cover' ? '序' : c.id === 'references' ? '文' : c.n === 'A' ? '甲' : c.n === 'B' ? '乙' : CN[+c.n];
+let state = { geno: 'all', sel: 'me', year: 1998 };
+
+function buildRail() {
+  let html = '', g = '';
+  chapters.forEach(c => {
+    if (c.group !== g) { g = c.group; html += `<h3>${g}</h3>`; }
+    html += `<a href="#${c.id}" data-id="${c.id}"><span class="n" lang="zh">${cnShort(c)}</span><span>${c.title}</span></a>`;
+  });
+  rail.innerHTML = html;
+}
+
+function render(id) {
+  const i = Math.max(0, chapters.findIndex(c => c.id === id));
+  const c = chapters[i];
+  const prev = chapters[i-1], next = chapters[i+1];
+  const head = c.id === 'cover' ? '' : `<div class="chap"><span class="cn" lang="zh">${cnLabel(c)}</span><span class="eyebrow">${c.n ? (c.group === 'Appendices' ? 'Appendix ' + c.n : 'Chapter ' + c.n) : c.group}</span></div><h1>${c.title}</h1><div class="h1rule"></div>`;
+  page.innerHTML = head + c.html() + `<nav class="pager">
+    <a class="prev" href="#${prev ? prev.id : ''}" ${prev ? '' : 'hidden'}><small lang="zh">上一章 · Previous</small>${prev ? prev.title : ''}</a>
+    <a class="next" href="#${next ? next.id : ''}" ${next ? '' : 'hidden'}><small lang="zh">下一章 · Next</small>${next ? next.title : ''}</a></nav>`;
+  rail.querySelectorAll('a').forEach(a => a.classList.toggle('on', a.dataset.id === c.id));
+  $('#progress').style.width = ((i + 1) / chapters.length * 100) + '%';
+  document.body.classList.remove('nav-open'); $('#menuBtn').setAttribute('aria-expanded','false');
+  if (c.id === 'appendix-a') initTimeline();
+  if (c.id === 'appendix-b') initGeno();
+  window.scrollTo(0, 0);
+}
+
+function initTimeline() {
+  const box = $('#years');
+  box.innerHTML = years.map(e => `<button class="yr ${e.t.startsWith('No') ? '' : 'has'} ${e.y===1998?'birth':''}" role="tab" data-y="${e.y}" aria-selected="false">${e.y}<small>${e.a>0?'age '+e.a:e.a===0?'birth':e.a}</small></button>`).join('');
+  box.addEventListener('click', ev => { const b = ev.target.closest('.yr'); if (b) showYear(+b.dataset.y); });
+  showYear(state.year);
+}
+function showYear(y) {
+  state.year = y;
+  const e = years.find(v => v.y === y);
+  document.querySelectorAll('.yr').forEach(b => { const on = +b.dataset.y === y; b.classList.toggle('on', on); b.setAttribute('aria-selected', on); });
+  $('#yearCard').innerHTML = `<div class="meta">${y} · ${e.a===0?'my birth':e.a<0?Math.abs(e.a)+' years before my birth':'age '+e.a}${e.w?' · affected: '+e.w:''}</div><h4>${e.t}</h4><p>${e.d}</p>`;
+}
+
+function shape(id, p) {
+  const fill = p.c ? `var(--c-${p.c})` : 'var(--sheet)';
+  let s = '';
+  if (p.s === 'm') {
+    s = `<rect class="shape" x="${p.x-p.z/2}" y="${p.y-p.z/2}" width="${p.z}" height="${p.z}" fill="${fill}"/>`;
+    if (p.mh) s = `<rect x="${p.x-p.z/2-4}" y="${p.y-p.z/2-4}" width="${p.z+8}" height="${p.z+8}" fill="none" stroke="var(--ink-soft)"/>` + `<rect class="shape" x="${p.x-p.z/2}" y="${p.y-p.z/2}" width="${p.z}" height="${p.z}" fill="var(--cobalt-wash)"/><rect x="${p.x-p.z/2}" y="${p.y-p.z/2}" width="${p.z/2}" height="${p.z}" fill="var(--c-mh)" pointer-events="none"/>`;
+  } else s = `<circle class="shape" cx="${p.x}" cy="${p.y}" r="${p.z}" fill="${fill}"/>`;
+  if (p.dead) { const d = p.s==='m' ? p.z/2 : p.z*0.68; s += `<path class="xx" d="M${p.x-d} ${p.y-d}L${p.x+d} ${p.y+d}M${p.x+d} ${p.y-d}L${p.x-d} ${p.y+d}"/>`; }
+  let t = '';
+  if (p.top) t += `<text x="${p.x}" y="34" text-anchor="middle" font-size="11.5">${p.top[0]}</text><text class="q" x="${p.x}" y="50" text-anchor="middle" font-size="11.5">${p.top[1]}</text>`;
+  if (p.yr) p.yr.forEach((v, k) => t += `<text class="q" x="${p.x}" y="${212+k*14}" text-anchor="middle" font-size="11.5">${v}</text>`);
+  if (p.low) t += `<text x="${p.x}" y="346" text-anchor="middle" font-size="13" font-weight="600">${p.low[0]}</text><text class="q" x="${p.x}" y="361" text-anchor="middle" font-size="11.5">${p.low[1]}</text>`;
+  return `<g class="node" tabindex="0" role="button" aria-label="${p.name}" data-id="${id}">${s}${t}</g>`;
+}
+function initGeno() {
+  const lines = L.map(([d,k,tags]) => `<path class="${k}" d="${d}" data-tags="${tags.join(' ')}"/>`).join('');
+  const labels = `<text x="112" y="262" text-anchor="middle" font-size="13" font-weight="600" class="node-lbl" data-for="dad">Father · 1969</text><text class="q" x="112" y="278" text-anchor="middle" font-size="11.5" data-for="dad">Accountant</text>
+   <text x="638" y="262" text-anchor="end" font-size="13" font-weight="600" data-for="mom">Mother · 1969</text><text class="q" x="638" y="278" text-anchor="end" font-size="11.5" data-for="mom">Financial analyst</text>`;
+  $('#svgbox').innerHTML = `<svg viewBox="0 0 680 410" role="img" aria-label="Three-generation family genogram">${lines}${labels}${Object.entries(P).map(([id,p]) => shape(id,p)).join('')}</svg>`;
+  $('#filters').innerHTML = FILTERS.map(f => `<button class="chip" data-k="${f.k}" aria-pressed="false">${f.label}</button>`).join('');
+  $('#filters').addEventListener('click', ev => { const b = ev.target.closest('.chip'); if (b) setFilter(b.dataset.k); });
+  const svg = $('#svgbox svg');
+  svg.addEventListener('click', ev => { const n = ev.target.closest('.node'); if (n) select(n.dataset.id); });
+  svg.addEventListener('keydown', ev => { const n = ev.target.closest('.node'); if (n && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); select(n.dataset.id); } });
+  setFilter(state.geno); select(state.sel);
+}
+function setFilter(k) {
+  state.geno = k;
+  document.querySelectorAll('.chip').forEach(c => { const on = c.dataset.k === k; c.classList.toggle('on', on); c.setAttribute('aria-pressed', on); });
+  $('#filterNote').textContent = FILTERS.find(f => f.k === k).note;
+  const all = k === 'all';
+  document.querySelectorAll('#svgbox .node').forEach(n => { const hit = all || P[n.dataset.id].tags.includes(k); n.classList.toggle('dim', !hit); n.classList.toggle('lit', !all && hit); });
+  document.querySelectorAll('#svgbox path[data-tags]').forEach(p => { const hit = all || p.dataset.tags.split(' ').includes(k); p.classList.toggle('dim', !hit); p.classList.toggle('lit', !all && hit); });
+  document.querySelectorAll('#svgbox [data-for]').forEach(t => { const hit = all || P[t.dataset.for].tags.includes(k); t.classList.toggle('dim', !hit); });
+}
+function select(id) {
+  state.sel = id;
+  const p = P[id];
+  document.querySelectorAll('#svgbox .node').forEach(n => n.classList.toggle('sel', n.dataset.id === id));
+  const cond = {dh:'Diabetes and high blood pressure',di:'Diabetes',hb:'High blood pressure',ca:'Cancer'}[p.c];
+  $('#who').innerHTML = `<div class="meta"><b>Selected</b>${cond ? ' · ' + cond : ''}${p.dead ? ' · Deceased' : ''}</div><h4>${p.name}</h4><p>${p.info}</p><p><b>Relationships:</b> ${p.rel}</p>`;
+}
+
+/* notes toggle */
+const nt = $('#notesToggle');
+try { if (localStorage.getItem('rb-notes') === 'off') nt.checked = false; } catch (e) {}
+const applyNotes = () => { document.body.classList.toggle('hide-notes', !nt.checked); try { localStorage.setItem('rb-notes', nt.checked ? 'on' : 'off'); } catch (e) {} };
+nt.addEventListener('change', applyNotes); applyNotes();
+
+$('#menuBtn').addEventListener('click', () => { const open = document.body.classList.toggle('nav-open'); $('#menuBtn').setAttribute('aria-expanded', open); });
+
+buildRail();
+const route = () => render((location.hash || '#cover').slice(1));
+window.addEventListener('hashchange', route);
+route();
+</script>
+
+</body>
+</html>
